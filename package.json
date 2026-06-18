@@ -1,0 +1,29 @@
+{
+  "name": "mark11",
+  "productName": "Mark11",
+  "version": "1.0.0",
+  "description": "A simple Markdown note application.",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tahaxbyrk/Mark11.git"
+  },
+  "keywords": [
+    "Markdown",
+    "Note-Taking App"
+  ],
+  "author": "tahaxbyrk",
+  "license": "GPL-3.0-only",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tahaxbyrk/Mark11/issues"
+  },
+  "homepage": "https://github.com/tahaxbyrk/Mark11#readme",
+  "devDependencies": {
+    "electron": "^42.4.1"
+  }
+}
