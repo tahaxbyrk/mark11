@@ -9,6 +9,7 @@ const createWindow = () => {
         width: 900,
         height: 700,
         autoHideMenuBar: true,
+        icon: path.join(__dirname, '../assets/app-icons/mark11.ico'),
         webPreferences: {
             preload: path.join(__dirname, '../preload/preload.js'),
             contextIsolation: true,
