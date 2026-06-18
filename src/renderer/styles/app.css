@@ -1,3 +1,12 @@
 /*Import other styles here.*/
 /*This file is the entry point for styles in the renderer process.
    You can import other styles here.*/
+
+/* Import body */
+@import url('./body/body.css');
+/* Import container */
+@import url('./container/app-container.css');
+/* Import sidebar */
+@import url('./sidebar/sidebar.css');
+/* Import variables */
+@import url('./variables/color-variables.css');

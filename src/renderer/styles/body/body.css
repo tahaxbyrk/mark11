@@ -16,6 +16,6 @@ body {
 }
 
 ::selection {
-    background-color: var(--text-selection);
+    background-color: var(--text-selection-color);
     color: black;
 }

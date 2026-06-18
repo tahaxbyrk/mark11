@@ -3,7 +3,9 @@
     :root {
         --body-bg-color: rgb(17, 17, 27);
         --text-color: rgb(205, 214, 244);
-        --text-selection: rgb(180, 190, 254);
+        --text-selection-color: rgb(180, 190, 254);
+        --sidebar-bg-color: rgb(24, 24, 37);
+        --border-color: rgba(255, 255, 255, 0.05);
     }
 }
 
@@ -11,6 +13,8 @@
     :root {
         --body-bg-color: rgb(220, 224, 232);
         --text-color: rgb(76, 79, 105);
-        --text-selection: rgb(180, 190, 254);
+        --text-selection-color: rgb(180, 190, 254);
+        --sidebar-bg-color: rgb(230, 233, 239);
+        --border-color: rgb(92, 95, 119);
     }
 }

@@ -1,0 +1,26 @@
+/*This file contains sidebar styles. Only the sidebar itself, scrollbar, and header are included.*/
+.sidebar {
+    background-color: var(--sidebar-bg-color);
+    width: 180px;
+    min-height: calc(100vh - 10px);
+    margin: 5px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebarHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+#sidebar-title {
+    color: var(--text-color);
+    user-select: none;
+}
