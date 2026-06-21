@@ -40,9 +40,23 @@
                 </div>
             </aside>
 
-            <div class="settingsContent">
-                <div class="settingsTopbar"></div>
+            <div class="settingsPage active" id="page-appearance">
+                <div class="settingsGroupLabel">Theme</div>
+                <div class="settingsGroup">
+                    <div class="settingsRow">
+                        <div>
+                            <div class="settingsRowLabel">Color Scheme</div>
+                            <div class="settingsRowDesc">Choose the overall color scheme for the application.</div>
+                        </div>
+                        <label for="theme-select"></label><select class="settingsSelect" id="theme-select">
+                            <option value="system">System</option>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+                    </div>
+                </div>
             </div>
+
         </dialog>
     </aside>
 </div>
