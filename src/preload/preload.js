@@ -5,4 +5,5 @@ const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
     setTheme: (theme) => ipcRenderer.invoke('setTheme', theme),
+    getSettings: (key) => ipcRenderer.invoke('getSettings', key),
 });

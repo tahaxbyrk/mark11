@@ -25,5 +25,8 @@
   "homepage": "https://github.com/tahaxbyrk/Mark11#readme",
   "devDependencies": {
     "electron": "^42.4.1"
+  },
+  "dependencies": {
+    "electron-store": "^8.2.0"
   }
 }

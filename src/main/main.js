@@ -1,9 +1,12 @@
 // Electron main process.
 // This file is the entry point of the Electron application.
 // It is responsible for creating the application window and managing the application's lifecycle.
-const { app, BrowserWindow } = require('electron/main');
+const { app, BrowserWindow, nativeTheme } = require('electron/main');
 const path = require('node:path');
 const {registerIpcHandlers} = require('./ipcHandlers');
+
+const Store = require('electron-store');
+const store = new Store( { name: 'settings' } );
 
 const createWindow = () => {
     const window = new BrowserWindow({
@@ -23,7 +26,10 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
-    registerIpcHandlers()
+    registerIpcHandlers();
+    let savedTheme;
+    savedTheme = store.get('theme', 'system');
+    nativeTheme.themeSource = savedTheme;
     createWindow();
 
     app.on('activate', () => {

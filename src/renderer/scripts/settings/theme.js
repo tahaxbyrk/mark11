@@ -4,3 +4,7 @@ const themeSelector = document.getElementById('theme-select');
 themeSelector.addEventListener('change', (e) => {
     window.electronAPI.setTheme(e.target.value);
 });
+
+window.electronAPI.getSettings('theme').then((savedTheme) => {
+    themeSelector.value = savedTheme || 'system';
+});
