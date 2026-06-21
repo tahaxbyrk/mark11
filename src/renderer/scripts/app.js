@@ -4,3 +4,5 @@
 
 // Import dialog
 import('./dialog/settings-dialog/settings-dialog.js');
+// Import settings
+import('./settings/theme.js');

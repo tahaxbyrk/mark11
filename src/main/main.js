@@ -3,6 +3,7 @@
 // It is responsible for creating the application window and managing the application's lifecycle.
 const { app, BrowserWindow } = require('electron/main');
 const path = require('node:path');
+const {registerIpcHandlers} = require('./ipcHandlers');
 
 const createWindow = () => {
     const window = new BrowserWindow({
@@ -22,6 +23,7 @@ const createWindow = () => {
 };
 
 app.whenReady().then(() => {
+    registerIpcHandlers()
     createWindow();
 
     app.on('activate', () => {
