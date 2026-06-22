@@ -1,5 +1,4 @@
 /*Markdown styles for light and dark theme*/
-@media (prefers-color-scheme: dark) {
     :root {
         #preview h1, #preview h2, #preview h3,
         #preview h4, #preview h5, #preview h6 {
@@ -102,7 +101,6 @@
             opacity: 0.6;
         }
     }
-}
 
 @media (prefers-color-scheme: light) {
     :root {
