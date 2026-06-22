@@ -1,0 +1,36 @@
+/*This file contains to preview panel styles*/
+#preview {
+    flex: 1;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 18px;
+    padding: 20px;
+    font-size: 15px;
+    background-color: var(--body-bg-color);
+    color: var(--text-color);
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    min-height: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+#preview::-webkit-scrollbar {
+    width: 10px;
+}
+
+#preview::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#preview::-webkit-scrollbar-thumb {
+    background-color: var(--select-bg-color);
+    border-radius: 12px;
+}
+
+#preview::-webkit-scrollbar-thumb:hover {
+    background-color: var(--border-color);
+    cursor: pointer;
+}
