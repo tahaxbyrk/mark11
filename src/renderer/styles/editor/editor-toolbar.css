@@ -1,0 +1,36 @@
+/*This file contains the editor toolbar components style.*/
+.editorToolbar {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+    padding: 6px 12px;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.editorToolbarBtn {
+    background: none;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 18px;
+    padding: 6px 12px;
+    cursor: pointer;
+    opacity: 0.5;
+    backdrop-filter: blur(10px);
+    user-select: none;
+    transition: 0.5s;
+}
+
+.editorToolbarBtn:hover {
+    opacity: 1;
+}
+
+.editorToolbarBtn.active {
+    opacity: 1;
+    background-color: var(--select-bg-color);
+}
