@@ -51,6 +51,36 @@ function registerIpcHandlers() {
         if (canceled || !filePaths.length) return null;
         return filePaths[0];
     });
+
+    // Save file function
+    ipcMain.handle('saveFile', (event, filePath, content) => {
+        fs.writeFileSync(filePath, content, 'utf-8');
+    });
+
+    // Read file function
+    ipcMain.handle('readFile', (event, filePath) => {
+        return fs.readFileSync(filePath, 'utf-8');
+    });
+
+    // Remove file function
+    ipcMain.handle('removeFile', (event, filePath) => {
+        const notes = store.get('notes', []);
+        store.set('notes', notes.filter(p => p !== filePath));
+    });
+
+    // Save file function (store)
+    ipcMain.handle('getFile', () => {
+        return store.get('notes', []);
+    });
+
+    ipcMain.handle('addFile', (event, filePath) => {
+        const notes = store.get('notes', []);
+
+        if (!notes.includes(filePath)) {
+            notes.push(filePath);
+            store.set('notes', notes);
+        }
+    });
 }
 
 module.exports = { registerIpcHandlers };
