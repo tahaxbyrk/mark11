@@ -11,5 +11,6 @@ import('./editor/editor-toolbar.js');
 import('./settings/theme.js');
 import('./settings/font-size.js');
 import('./settings/spellcheck.js');
+import('./settings/about.js');
 // Import sidebar
 import('./sidebar/sidebar-toolbar.js');

@@ -15,4 +15,11 @@ contextBridge.exposeInMainWorld('electronAPI', {
     getFile: () => ipcRenderer.invoke('getFile'),
     addFile: (filePath) => ipcRenderer.invoke('addFile', filePath),
     parseMarkdown: (content) => ipcRenderer.invoke('parseMarkdown', content),
+    getVersion: () => ipcRenderer.invoke('getVersion'),
 });
+
+contextBridge.exposeInMainWorld('versions', {
+    node: () => process.versions.node,
+    chrome: () => process.versions.chrome,
+    electron: () => process.versions.electron
+})

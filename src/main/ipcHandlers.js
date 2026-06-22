@@ -1,7 +1,7 @@
 /*This module is dedicated to centralizing all backend operations that
 require operating system permissions for the application.
 It is triggered as 'registerIpcHandlers()' in main.js.*/
-const { ipcMain, nativeTheme, dialog } = require('electron');
+const { ipcMain, nativeTheme, dialog, app } = require('electron');
 const fs = require('fs');
 const Store = require('electron-store');
 const store = new Store( { name: 'settings' } );
@@ -89,6 +89,10 @@ function registerIpcHandlers() {
 
     ipcMain.handle('parseMarkdown', (event, content) => {
         return marked(content);
+    });
+
+    ipcMain.handle('getVersion', () => {
+        return app.getVersion();
     });
 }
 
