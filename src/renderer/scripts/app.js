@@ -4,6 +4,8 @@
 
 // Import dialog
 import('./dialog/settings-dialog/settings-dialog.js');
+// Import editor
+import('./editor/editor.js');
 // Import settings
 import('./settings/theme.js');
 // Import sidebar
