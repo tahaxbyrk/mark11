@@ -16,6 +16,7 @@
 @import url('./editor/preview.css');
 /* Import sidebar */
 @import url('./sidebar/sidebar.css');
+@import url('./sidebar/sidebar-body.css');
 @import url('./sidebar/sidebar-toolbar.css');
 /* Import tooltip */
 @import url('./tooltip/tooltip.css');
