@@ -38,6 +38,10 @@
                     <img src="../../assets/icons/appearance.svg" class="settingsNavIcon" alt="Appearance" draggable="false">
                     Appearance
                 </div>
+                <div class="settingsNavItem" data-page="editor">
+                    <img src="../../assets/icons/editor.svg" class="settingsNavIcon" alt="Editor" draggable="false">
+                    Editor
+                </div>
             </aside>
 
             <div class="settingsPage active" id="page-appearance">
@@ -67,6 +71,23 @@
                             <label for="font-size-slider"></label><input type="range" min="12" max="24" value="16" id="font-size-slider">
                             <span class="settingsSliderValue" id="font-size-value">16px</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settingsPage" id="page-editor">
+                <div class="settingsGroupLabel">Editor</div>
+                <div class="settingsGroup">
+                    <div class="settingsRow">
+                        <div>
+                            <div class="settingsRowLabel">Spellcheck</div>
+                            <div class="settingsRowDesc">Choose the spell check mode.</div>
+                        </div>
+                        <label class="settingsToggle">
+                            <input type="checkbox" id="spellcheck-toggle">
+                            <div class="settingsToggleTrack"></div>
+                            <div class="settingsToggleThumb"></div>
+                        </label>
                     </div>
                 </div>
             </div>

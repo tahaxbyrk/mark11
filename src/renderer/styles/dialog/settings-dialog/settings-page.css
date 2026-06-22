@@ -103,3 +103,46 @@ input[type=range]::-webkit-slider-thumb {
 input[type=range]::-webkit-slider-thumb:hover {
     opacity: 0.85;
 }
+
+.settingsToggle {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.settingsToggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+
+.settingsToggleTrack {
+    position: absolute;
+    inset: 0;
+    background: var(--border-color);
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.settingsToggle input:checked + .settingsToggleTrack {
+    background: rgb(136, 57, 239);
+}
+
+.settingsToggleThumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.2s;
+    pointer-events: none;
+}
+
+.settingsToggle input:checked ~ .settingsToggleThumb {
+    left: 19px;
+}
