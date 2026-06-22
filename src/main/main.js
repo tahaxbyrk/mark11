@@ -1,7 +1,7 @@
 // Electron main process.
 // This file is the entry point of the Electron application.
 // It is responsible for creating the application window and managing the application's lifecycle.
-const { app, BrowserWindow, nativeTheme } = require('electron/main');
+const { app, BrowserWindow, nativeTheme, Menu } = require('electron/main');
 const path = require('node:path');
 const {registerIpcHandlers} = require('./ipcHandlers');
 
@@ -22,6 +22,28 @@ const createWindow = () => {
             preload: path.join(__dirname, '../preload/preload.js'),
             contextIsolation: true,
             nodeIntegration: false,
+        }
+    });
+
+    const editContextMenu = new Menu.buildFromTemplate([
+        { role: 'copy'},
+        { role: 'selectAll' },
+        { role: 'paste' },
+        { role: 'cut' },
+        { role: 'undo' },
+        { role: 'redo' }
+    ]);
+
+    const previewContextMenu = new Menu.buildFromTemplate([
+        { role: 'copy'},
+        { role: 'selectAll' }
+    ]);
+
+    window.webContents.on('context-menu', (_event, params) => {
+        if (params.isEditable) {
+            editContextMenu.popup();
+        } else if (params.selectionText || !params.isEditable) {
+            previewContextMenu.popup();
         }
     });
 
