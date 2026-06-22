@@ -12,6 +12,8 @@
         --dialog-bg-color: rgb(30, 30, 46);
         --tab-hover-bg-color: rgb(69, 71, 90);
         --row-bg-color: rgb(48 48 68);
+        --slider-bg-color: rgb(127, 132, 156);
+        --slider-thumb-bg-color: rgb(68 70 87);
     }
 }
 
@@ -28,5 +30,7 @@
         --dialog-bg-color: rgb(239, 241, 245);
         --tab-hover-bg-color: rgb(188, 192, 204);
         --row-bg-color: rgb(204, 208, 218);
+        --slider-bg-color: rgb(140, 143, 161);
+        --slider-thumb-bg-color: rgb(156, 160, 176);
     }
 }
