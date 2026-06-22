@@ -6,6 +6,7 @@
 import('./dialog/settings-dialog/settings-dialog.js');
 // Import editor
 import('./editor/editor.js');
+import('./editor/editor-toolbar.js');
 // Import settings
 import('./settings/theme.js');
 // Import sidebar

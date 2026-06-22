@@ -5,6 +5,7 @@ const { ipcMain, nativeTheme, dialog } = require('electron');
 const fs = require('fs');
 const Store = require('electron-store');
 const store = new Store( { name: 'settings' } );
+const { marked } = require('marked');
 
 function registerIpcHandlers() {
 
@@ -80,6 +81,10 @@ function registerIpcHandlers() {
             notes.push(filePath);
             store.set('notes', notes);
         }
+    });
+
+    ipcMain.handle('parseMarkdown', (event, content) => {
+        return marked(content);
     });
 }
 

@@ -29,6 +29,10 @@ export function addNoteToSidebar(filePath) {
             editor.value = '';
             editor.disabled = true;
         }
+
+        if (preview) {
+            preview.innerHTML = '';
+        }
     });
 
     item.appendChild(titleSpan);
@@ -45,6 +49,12 @@ export async function openNote(filePath, item) {
     content = await window.electronAPI.readFile(filePath);
     editor.value = content;
     editor.disabled = false;
+
+    if (!preview.classList.contains('hidden')) {
+        window.electronAPI.parseMarkdown(content || '').then((html) => {
+            preview.innerHTML = html;
+        });
+    }
 }
 
 editor.addEventListener('input', () => {

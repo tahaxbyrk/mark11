@@ -13,4 +13,5 @@ contextBridge.exposeInMainWorld('electronAPI', {
     removeFile: (filePath) => ipcRenderer.invoke('removeFile', filePath),
     getFile: () => ipcRenderer.invoke('getFile'),
     addFile: (filePath) => ipcRenderer.invoke('addFile', filePath),
+    parseMarkdown: (content) => ipcRenderer.invoke('parseMarkdown', content),
 });
